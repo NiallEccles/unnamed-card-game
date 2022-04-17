@@ -1,0 +1,30 @@
+<div class="card" [ngStyle]="{'outline': '7px solid ' + backgroundColour}">
+  <div class="card-title" [ngStyle]="{'background': backgroundColour}">
+    <h1 [ngStyle]="{'color': textColour}">{{name}}</h1>
+    <div class="card-attribute">
+      <h2 [ngStyle]="{'color': textColour}" *ngIf="status !== 'DEAD'">
+        {{attributes.health}}
+    </h2>
+    <div class="dead" *ngIf="status == 'DEAD'">
+        <img src="../../../assets/dead.png" alt="">
+    </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div></div>
+  </div>
+  <div class="card-attributes">
+    <div class="card-attribute">
+        <h3>{{attributes.attack}}</h3>
+        <div class="icon">
+            <img src="../../../assets/attack.png" alt="">
+        </div>
+    </div>
+    <div class="card-attribute" id="defence">
+        <h3>{{attributes.defence}}</h3>
+        <div class="icon">
+            <img src="../../../assets/defence.png" alt="">
+        </div>
+    </div>
+  </div>
+</div>
