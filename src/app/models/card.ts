@@ -1,6 +1,6 @@
 export interface Card {
-    name: string;
-    attributes: Attributes;
+    name?: string;
+    attributes?: Attributes;
 }
 
 export interface Attributes {

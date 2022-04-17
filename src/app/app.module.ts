@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { reducers } from './reducers';
 import { CardComponent } from './ui/card/card.component';
 
 @NgModule({
@@ -12,7 +14,8 @@ import { CardComponent } from './ui/card/card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({ ...reducers })
   ],
   providers: [],
   bootstrap: [AppComponent]
